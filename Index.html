@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <div class="bot">
+        <div id="impact" onmouseover="impact()" onmouseout="none()">Impact</div>
+        <div id="times" onmouseover="times()" onmouseout="none()">Times</div>
+    </div>
+
+    <div class="about" onclick="openAbout()">About</div>
+    
+    <div id="boxAbout" class="overlay">
+        <div class="closebtn" onclick="closeAbout()" style="font-size: 80px;">X</div>
+        <div class="overlay-content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi necessitatibus assumenda itaque quae vitae maxime, provident quia cum explicabo animi! Earum exercitationem impedit quaerat ullam dignissimos nisi? Reprehenderit, delectus. Optio!
+        </div>
+    </div>  
+    <div id="box" class="box"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
