@@ -6,21 +6,36 @@
     <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
-    <div class="bot">
-        <div id="impact" onmouseover="impact()" onmouseout="none()">Impact</div>
-        <div id="times" onmouseover="times()" onmouseout="none()">Times</div>
+    <div class="header">
+        <div class="title btn">typebreak</div>
+        <div class="opt btn" onmouseover="show5x5()" onmouseout="hide5x5()">
+            5x5
+            <div id="show5x5" class="btn">
+                <a href="Index.html">Testo</a> <br>
+                <a href="Index.html">Prova</a> <br>
+            </div>
+        </div>
+        
     </div>
 
-    <div class="about" onclick="openAbout()">About</div>
+    <div class="bot">
+        <div class="btn" id="impact" onmouseover="impact()" onmouseout="none()">Impact</div>
+        <div class="btn" id="times" onmouseover="times()" onmouseout="none()">Times</div>
+        <div class="btn" id="verdana" onmouseover="verdana()" onmouseout="none()">Verdana</div>
+    </div>
+
+    <div class="about btn" onclick="openAbout()">About</div>
     
     <div id="boxAbout" class="overlay">
-        <div class="closebtn" onclick="closeAbout()" style="font-size: 80px;">X</div>
+        <img src="img/next.png" class="closebtn" onclick="closeAbout()">
         <div class="overlay-content">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi necessitatibus assumenda itaque quae vitae maxime, provident quia cum explicabo animi! Earum exercitationem impedit quaerat ullam dignissimos nisi? Reprehenderit, delectus. Optio!
         </div>
     </div>  
-    <div id="box" class="box"></div>
 
+
+
+    <div id="box" class="box"></div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="js/main.js"></script>
 </body>
