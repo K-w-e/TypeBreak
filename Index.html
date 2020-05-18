@@ -7,15 +7,12 @@
 </head>
 <body>
     <div class="header">
-        <div class="title btn">typebreak</div>
-        <div class="opt btn" onmouseover="show5x5()" onmouseout="hide5x5()">
-            5x5
-            <div id="show5x5" class="btn">
-                <a href="Index.html">Testo</a> <br>
-                <a href="Index.html">Prova</a> <br>
-            </div>
+        <a class="title btn" onmouseout="none()" href="Index.html">typebreak</a>
+        <div class="right">
+            <a class="opt btn" href="5x5.html" onmouseout="none()">5x5</a>
+            <a class="instagram btn" href="https://Instagram.com/type.break" target="_blank" onmouseout="none()">Instagram</a>
         </div>
-        
+
     </div>
 
     <div class="bot">
@@ -24,11 +21,13 @@
         <div class="btn" id="verdana" onmouseover="verdana()" onmouseout="none()">Verdana</div>
     </div>
 
-    <div class="about btn" onclick="openAbout()">About</div>
+    <div class="wip btn" onmouseover="wip()" onmouseout="none()">WIP</div>
+
+    <div class="about btn" onclick="openAbout()" onmouseout="none()">About</div>
     
     <div id="boxAbout" class="overlay">
         <img src="img/next.png" class="closebtn" onclick="closeAbout()">
-        <div class="overlay-content">
+        <div class="overlay-content" id="overlay">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi necessitatibus assumenda itaque quae vitae maxime, provident quia cum explicabo animi! Earum exercitationem impedit quaerat ullam dignissimos nisi? Reprehenderit, delectus. Optio!
         </div>
     </div>  

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/turn.js"></script>  <!-- ???? -->
+
+</head>
+<body>
+    <div class="header">
+        <a class="title btn" href="Index.html">typebreak</a>
+        <div class="right">
+            <a class="opt btn" href="5x5.html">5x5</a>
+            <a class="instagram btn" href="https://Instagram.com/type.break" target="_blank">Instagram</a>
+        </div>
+
+    </div>
+
+    <div class="bot">
+        <div class="btn" id="uno" onmouseup="uno()">1</div>
+        <div class="btn" id="due" onmouseover="due()">2</div>
+        <div class="btn" id="tre" onmouseover="tre()">3</div>
+
+    </div>
+
+    <div class="about btn" onclick="openAbout()">About</div>
+    
+    <div id="boxAbout" class="overlay">
+        <img src="img/next.png" class="closebtn" onclick="closeAbout()">
+        <div class="overlay-content" id="overlay">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi necessitatibus assumenda itaque quae vitae maxime, provident quia cum explicabo animi! Earum exercitationem impedit quaerat ullam dignissimos nisi? Reprehenderit, delectus. Optio!
+        </div>
+    </div>  
+
+
+
+    <!--<div id="home5x5" class="box"></div>-->
+
+    <div id="container">
+        <!-- Sopra -->
+        <div class="slideshow-container" id="boxSopra">   
+          <!--  <div class="mySlides">
+              <img src="img/aaa.jpg">
+            </div>
+                
+            <div class="mySlides">
+                <img src="img/1.png">
+            </div>
+                
+            <div class="mySlides">
+                <img src="img/4.png">
+            </div>
+          -->      
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>       
+        </div>
+
+        <!-- Sotto -->
+        <div id="book">
+           <!-- <div style="background-image:url(img/1.png);"></div>
+            <div style="background-image:url(img/3.png);"></div>
+            <div style="background-image:url(img/4.png);"></div>
+            <div style="background-image:url(img/1.png);"></div>
+            <div style="background-image:url(img/3.png);"></div>-->
+        </div>
+
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/5x5.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
-let timer;
+let timer, xtimer;
 var fonts = [
-    "Arial",
+    "Onda",
     "Times",
     "Impact",
     "Verdana",
@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 function showAlphabet() {
     alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
-    document.getElementById("box").style.fontSize = "50vw";
+    document.getElementById("box").style.fontSize = "50vh";
     i=0;
     document.getElementById("box").innerHTML = alphabet[i];
     timer = setInterval(function(){
@@ -27,16 +27,18 @@ function showAlphabet() {
 
 function randomBgColor() {
     var rbg = [
-        "#ff0000",
-        "#b9c000",
-        "#547ff4",
+        "#6400ff",
+        "#00ffbe",
+        "#c6c6c6",
+        "#000000",
+        "#ffffff"
     ]
 
-    var colorBg = Math.floor((Math.random() * 3));
-    var colorTxt = Math.floor((Math.random() * 3));
+    var colorBg = Math.floor((Math.random() * 5));
+    var colorTxt = Math.floor((Math.random() * 5));
 
     while(colorTxt == colorBg)
-        colorTxt = Math.floor((Math.random() * 3));
+        colorTxt = Math.floor((Math.random() * 5));
 
     $("body").css("background-color", rbg[colorBg]);
     $(".box").css("color", rbg[colorTxt]);
@@ -44,14 +46,12 @@ function randomBgColor() {
 
 function none() {
     clearInterval(timer);
+    clearInterval(xtimer);
     $("body").css("background-color", "white");
     $(".box").css("color", "black");
-   /* setInterval(function(){
-        x = Math.floor((Math.random() * 4) + 1);
-        document.getElementById("box").style.fontFamily = fonts[x];
-    }, 200);*/
     document.getElementById("box").innerHTML = "typebreak";
-    document.getElementById("box").style.fontFamily = "";
+    document.body.style.backgroundImage = "url('')";
+    document.getElementById("box").style.fontFamily = fonts[Math.floor(Math.random() * 3)];
     document.getElementById("box").style.fontSize = "19vw";
 }
 
@@ -63,29 +63,62 @@ function impact() {
 
 function times() {
     showAlphabet();
-    document.getElementById("box").style.fontFamily = "Allianz";
+    document.getElementById("box").style.fontFamily = "Onda";
     randomBgColor();
 }
 
 function verdana() {
     showAlphabet();
-    document.getElementById("box").style.fontFamily = "Onda";
+    document.getElementById("box").style.fontFamily = "Test";
     randomBgColor();
 }
 
 function openAbout() {
-    document.getElementById("boxAbout").style.width = "50%";
+    var width = window.innerWidth;
+    console.log(width);
+    if(width>768){
+        document.getElementById("boxAbout").style.width = "50%";
+        document.getElementById("overlay").style.width = (width/2 -50)+"px";
+        
+    }
+    else{
+        document.getElementById("boxAbout").style.width = "100%";
+        document.getElementById("overlay").style.width = (width - 50)+"px";
+    }
 }
 
 function closeAbout() {
     document.getElementById("boxAbout").style.width = "0%";
 }
 
-function show5x5() {
-    document.getElementById("show5x5").style.display = "block";
+function wip() {
+    document.getElementById("box").innerHTML = "";
+    var imgs = shuffle();
+    i=0;
+    xtimer = setInterval(function(){  
+        document.body.style.backgroundImage = "url('img/"+imgs[i]+"')";
+        i++;
+        if(i == imgs.length) {
+            shuffle();
+            i=0;
+        }
+    }, 1000);
+    
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundAttachment = "Fixed";
+    //$(body).css("")
 }
 
-function hide5x5() {
-    document.getElementById("show5x5").style.display = "none";
+function shuffle() {
+    imgs = ["1.png", "Fontamara_01.jpg", "3.png", "4.png", "next.png"];
+    var j, x, i;
+    for (i = imgs.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = imgs[i];
+        imgs[i] = imgs[j];
+        imgs[j] = x;
+    }
+    console.log(imgs);
+    return imgs;
 }
-

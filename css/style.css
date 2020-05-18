@@ -13,10 +13,23 @@
     src: url('../fonts/Anton-Regular.ttf');
 }
 
+@font-face {
+    font-family: Test;
+    src: url('../fonts/DancingScript-Regular.ttf');
+}
+
+html{
+    height: 100%;
+}
+
 body{
     overflow: hidden;
     font-family: Helvetica, sans-serif;
     font-weight: 200;
+}
+
+a{
+    text-decoration: none;
 }
 
 #box{
@@ -53,12 +66,29 @@ body{
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 100px;
-    font-size: 1.4vw;
     text-align: center;
     background-color: black;
     color: white;
     box-shadow: 0 0 10px grey;
 }
+
+@media screen and (min-width: 375px){
+    .btn{
+        font-size: 3.5vw;
+    }
+}
+@media screen and(min-width: 780px){
+    .btn{
+        font-size: 2vw;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .btn{
+        font-size: 1.4vw;
+    }
+}
+
+     
 
 .btn:hover{
     background-color: grey;
@@ -70,26 +100,52 @@ body{
     left: 30px;
 }
 
-.opt{
+.right{
     position: absolute;
     top: 30px;
     right: 30px;
 }
 
-#show5x5{
-    display: none;
+.instagram{
+    float: left;
+    margin-right: 15px;
+}
+
+.opt{
+    float: right;
+}
+
+.wip{
     position: absolute;
-    top: 0;
-    right: 80px;
-    width: 200px;
-    
+    bottom: 30px;
+    right: 30px;
+}
+/*-------------------------------*/
+#container{
+    position: absolute;
+    display: none;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }
 
-/*
-#impact:hover + .test{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+#sopra{
+    height: 50%;
+    width: 100%;
 }
 
-#times:hover + .test{
-    font-family: 'Times New Roman', Times, serif;
-}*/
+#sotto{
+    height: 50%;
+    width: 100%;
+}
+
+
+#foto {
+    width: 900px;
+    height: 600px;
+    margin: auto; 
+  }
+  #foto .turn-page{
+    background-color: #CCCCCC;
+    background-size: 100% 100%;
+  }
