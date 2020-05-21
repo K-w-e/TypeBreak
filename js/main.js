@@ -52,7 +52,7 @@ function none() {
     document.getElementById("box").innerHTML = "typebreak";
     document.body.style.backgroundImage = "url('')";
     document.getElementById("box").style.fontFamily = fonts[Math.floor(Math.random() * 3)];
-    document.getElementById("box").style.fontSize = "19vw";
+    document.getElementById("box").style.fontSize = "17vw";
 }
 
 function impact() {
@@ -75,11 +75,12 @@ function verdana() {
 
 function openAbout() {
     var width = window.innerWidth;
+    var height = window.innerHeight;
     console.log(width);
     if(width>768){
         document.getElementById("boxAbout").style.width = "50%";
         document.getElementById("overlay").style.width = (width/2 -50)+"px";
-        
+        document.getElementById("overlay").style.height = (height-130)+"px"; 
     }
     else{
         document.getElementById("boxAbout").style.width = "100%";

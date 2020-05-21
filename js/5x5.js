@@ -40,7 +40,12 @@ function uno() {
     clearInterval(htimer);
     counterImg=0;
     document.getElementById("container").style.display = "block";
-    document.getElementById("container").style.backgroundSize = "cover";
+    if(window.innerWidth>780){
+      document.getElementById("container").style.backgroundSize = "cover";
+    }else{
+      document.getElementById("container").style.backgroundSize = "100%";
+      document.getElementById("container").style.backgroundRepeat = "no-repeat";
+    }
     document.getElementById("container").style.backgroundPosition = "center";
     document.getElementById("container").style.backgroundAttachment = "fixed";
     images = [
@@ -56,7 +61,9 @@ function due() {
   clearInterval(htimer);
   counterImg=0;
   document.getElementById("container").style.display = "block";
-  document.getElementById("container").style.backgroundSize = "cover";
+  if(window.innerWidth>780){
+    document.getElementById("container").style.backgroundSize = "cover";
+  }
   document.getElementById("container").style.backgroundPosition = "center";
   document.getElementById("container").style.backgroundAttachment = "fixed";
   images = [
