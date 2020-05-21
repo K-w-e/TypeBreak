@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/about.css?ts=<?=time()?>&quot">
+    <link rel="stylesheet" href="css/gallery.css?ts=<?=time()?>&quot">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/turn.js"></script>  <!-- ???? -->
-
+    <style>
+        .btn{
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    </style>    
 </head>
 <body>
     <div class="header">
@@ -34,6 +38,7 @@
         <img src="img/next.png" class="closebtn" onclick="closeAbout()">
         <div class="overlay-content" id="overlay">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi necessitatibus assumenda itaque quae vitae maxime, provident quia cum explicabo animi! Earum exercitationem impedit quaerat ullam dignissimos nisi? Reprehenderit, delectus. Optio!
+            <span id="test">Website built by<a href="https://alessandro-guerra.it" style="display: inline; color: white">Alessandro Guerra</a></span>
         </div>
     </div>  
 

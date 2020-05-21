@@ -52,7 +52,7 @@ function none() {
     document.getElementById("box").innerHTML = "typebreak";
     document.body.style.backgroundImage = "url('')";
     document.getElementById("box").style.fontFamily = fonts[Math.floor(Math.random() * 3)];
-    document.getElementById("box").style.fontSize = "17vw";
+    document.getElementById("box").style.fontSize = "15vw";
 }
 
 function impact() {
@@ -85,6 +85,7 @@ function openAbout() {
     else{
         document.getElementById("boxAbout").style.width = "100%";
         document.getElementById("overlay").style.width = (width - 50)+"px";
+        document.getElementById("overlay").style.height = (height-130)+"px"; 
     }
 }
 

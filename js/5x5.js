@@ -61,11 +61,14 @@ function due() {
   clearInterval(htimer);
   counterImg=0;
   document.getElementById("container").style.display = "block";
-  if(window.innerWidth>780){
-    document.getElementById("container").style.backgroundSize = "cover";
-  }
-  document.getElementById("container").style.backgroundPosition = "center";
-  document.getElementById("container").style.backgroundAttachment = "fixed";
+    if(window.innerWidth>780){
+      document.getElementById("container").style.backgroundSize = "cover";
+    }else{
+      document.getElementById("container").style.backgroundSize = "100%";
+      document.getElementById("container").style.backgroundRepeat = "no-repeat";
+    }
+    document.getElementById("container").style.backgroundPosition = "center";
+    document.getElementById("container").style.backgroundAttachment = "fixed";
   images = [
     "https://picsum.photos/200/300",
     "https://picsum.photos/300/300",
